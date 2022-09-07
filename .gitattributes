@@ -1,0 +1,21 @@
+# Normalising line ending for all text files
+* text=auto
+
+# Text files which must be normalised
+*.css           text
+*.js            text
+*.md            text
+*.properties    text
+*.txt           text
+*.html          text eol=lf
+*.ipynb         text
+
+# Source Files
+*.py            text diff=python
+*.py3           text diff=python
+
+# Binary Files
+*.gif           binary
+*.jpg           binary
+*.jpeg          binary
+*.png           binary
