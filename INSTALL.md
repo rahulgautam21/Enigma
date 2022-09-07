@@ -12,13 +12,13 @@ Installation Guides:
 First, clone the repository:
 
 ```
-$ git clone git@github.com:rahulgautam21/CSC-510.git
+$ git clone git@github.com:rahulgautam21/Enigma.git
 ```
 
 Change working directory to the repository:
 
 ```
-$ cd CSC-510
+$ cd Enigma
 ```
 
-You can now add your equations in the init.py file and use the calculator locally :) !
+You can now use the discord bot to give music recommendations !
