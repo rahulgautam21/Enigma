@@ -1,10 +1,13 @@
 import discord
+import os
 from get_all import *
 import re
+from dotenv import load_dotenv
 
 
-# TOKEN = os.getenv('DISCORD_TOKEN')
-TOKEN = "MTAyMzc2MDAzNzIwMzY4MTI5MA.GhRFer.qPgFUqt7o8677QozvQdGK8LcCO3U5IjQirBD2Y"
+load_dotenv('.env')
+TOKEN = os.getenv('DISCORD_TOKEN')
+# TOKEN = "MTAyMzc2MDAzNzIwMzY4MTI5MA.Gww-Na.W3xIuZd2Fcd_GwD7QEW0YWDFQqZyEkAL5vzeb4"
 intents = discord.Intents.all()
 intents.members = True
 client = discord.Client(intents=intents)
