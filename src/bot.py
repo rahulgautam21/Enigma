@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 
 load_dotenv('.env')
 TOKEN = os.getenv('DISCORD_TOKEN')
-# TOKEN = "MTAyMzc2MDAzNzIwMzY4MTI5MA.Gww-Na.W3xIuZd2Fcd_GwD7QEW0YWDFQqZyEkAL5vzeb4"
 intents = discord.Intents.all()
 intents.members = True
 client = discord.Client(intents=intents)
@@ -28,7 +27,7 @@ async def on_ready():
             f'{guild.name}(id: {guild.id})'
         )
 
-    bot_message = "Select upto three songs by typing in the serial number: "
+    bot_message = "Select songs by typing in the serial number: " + "\n" + "-------------------------------------------------"
     i = 0
     ten_random_songs = random_ten()
     for ele in zip(ten_random_songs["title"], ten_random_songs["artist"]):
