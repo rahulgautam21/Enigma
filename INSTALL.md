@@ -6,6 +6,7 @@
 Installation Guides:
   * [Git Installation Guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
   * [IDE Installation Guide (Pycharm)](https://docs.docker.com/get-docker/](https://www.jetbrains.com/help/pycharm/installation-guide.html)
+  * Install FFMPEG from https://www.gyan.dev/ffmpeg/builds, extract it and add it to your path 
 
 ## 2. Running Code
 

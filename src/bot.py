@@ -3,13 +3,17 @@ import os
 from get_all import *
 import re
 from dotenv import load_dotenv
+from discord.ext import commands, tasks
+from utils import searchSong
+from ytdl import YTDLSource
 
 
 load_dotenv('../.env')
 TOKEN = os.getenv('DISCORD_TOKEN')
 intents = discord.Intents.all()
 intents.members = True
-client = discord.Client(intents=intents)
+client = commands.Bot(command_prefix='/', intents=intents)
+
 
 all_songs = filtered_songs()[["title", "artist", "top genre"]]
 
@@ -18,6 +22,70 @@ def random_ten():
     ten_random_songs = (all_songs.sample(
         frac=1).groupby('top genre').head(1)).sample(10)
     return ten_random_songs
+
+
+@client.command(name='join', help='Tells the bot to join the voice channel')
+async def join(ctx):
+    if not ctx.message.author.voice:
+        await ctx.send("{} is not connected to a voice channel".format(ctx.message.author.name))
+        return
+    else:
+        channel = ctx.message.author.voice.channel
+    await channel.connect()
+
+
+@client.command(name='leave', help='To make the bot leave the voice channel')
+async def leave(ctx):
+    voice_client = ctx.message.guild.voice_client
+    if voice_client.is_connected():
+        await voice_client.disconnect()
+    else:
+        await ctx.send("The bot is not connected to a voice channel.")
+
+
+@client.command(name='play_song', help='To play song')
+async def play(ctx):
+    user_message = str(ctx.message.content)
+    song_name = user_message.split(' ', 1)[1]
+    try:
+        server = ctx.message.guild
+        voice_channel = server.voice_client
+        url = searchSong(song_name)
+        print(url)
+        async with ctx.typing():
+            filename = await YTDLSource.from_url(url, loop=client.loop)
+            voice_channel.play(discord.FFmpegPCMAudio(source=filename))
+        await ctx.send('**Now playing:** {}'.format(filename))
+    except Exception as e:
+        print(e)
+        await ctx.send("The bot is not connected to a voice channel.")
+
+
+@client.command(name='pause', help='This command pauses the song')
+async def pause(ctx):
+    voice_client = ctx.message.guild.voice_client
+    if voice_client.is_playing():
+        await voice_client.pause()
+    else:
+        await ctx.send("The bot is not playing anything at the moment.")
+
+
+@client.command(name='resume', help='Resumes the song')
+async def resume(ctx):
+    voice_client = ctx.message.guild.voice_client
+    if voice_client.is_paused():
+        await voice_client.resume()
+    else:
+        await ctx.send("The bot was not playing anything before this. Use play_song command")
+
+
+@client.command(name='stop', help='Stops the song')
+async def stop(ctx):
+    voice_client = ctx.message.guild.voice_client
+    if voice_client.is_playing():
+        await voice_client.stop()
+    else:
+        await ctx.send("The bot is not playing anything at the moment.")
 
 
 @client.event
@@ -57,5 +125,6 @@ async def on_message(message):
             print(options)
         else:
             await on_ready()
+        await client.process_commands(message)
 
 client.run(TOKEN)
