@@ -1,8 +1,7 @@
 from multiprocessing.util import debug
 import discord
-import os
+from numpy import empty_like
 from get_all import *
-import re
 from dotenv import load_dotenv
 from discord.ext import commands
 from utils import searchSong, random_ten
@@ -59,29 +58,30 @@ class Songs(commands.Cog):
         except Exception as e:
             await ctx.send("The bot is not connected to a voice channel.")
 
-    @commands.command(name='next_song', help='To play next song in queue')
-    async def next_song(self, ctx):
+    async def handle_empty_queue(self, ctx):
         try:
             songs_queue
         except NameError:
-            await ctx.send("No recommendations present. First generate recommendations")
-            return
+            await ctx.send("No recommendations present. First generate recommendations using /poll")
+            return True
         if songs_queue.get_len() == 0:
-            await ctx.send("No recommendations present. First generate recommendations")
-            return
-        await self.play_song(songs_queue.next_song(), ctx)
+            await ctx.send("No recommendations present. First generate recommendations using /poll")
+            return True
+        return False
+
+
+    @commands.command(name='next_song', help='To play next song in queue')
+    async def next_song(self, ctx):
+        empty_queue = await self.handle_empty_queue(ctx)
+        if not empty_queue:
+            await self.play_song(songs_queue.next_song(), ctx)
 
     @commands.command(name='prev_song', help='To play prev song in queue')
     async def play(self, ctx):
-        try:
-            songs_queue
-        except NameError:
-            await ctx.send("No recommendations present. First generate recommendations")
-            return
-        if songs_queue.get_len() == 0:
-            await ctx.send("No recommendations present. First generate recommendations")
-            return
-        await self.play_song(songs_queue.prev_song(), ctx)
+        empty_queue = await self.handle_empty_queue(ctx)
+        if not empty_queue:
+            await self.play_song(songs_queue.prev_song(), ctx)
+        
 
     @commands.command(name='pause', help='This command pauses the song')
     async def pause(self, ctx):
@@ -116,12 +116,23 @@ class Songs(commands.Cog):
                     ' , '.join(selected_songs)
                 await ctx.send(bot_message)
                 break
-        # TODO: Send the selected songs and get preferences
-        # For now setting it manually
         global songs_queue
-        songs_queue = Songs_Queue(ten_random_songs['title'].tolist())
+        recommended_songs = recommend(selected_songs)
+        songs_queue = Songs_Queue(recommended_songs)
         await self.play_song(songs_queue.next_song(), ctx)
 
+    @commands.command(name='queue', help='Show active queue of recommendations')
+    async def queue(self, ctx):
+        empty_queue = await self.handle_empty_queue(ctx)
+        if not empty_queue:
+            queue,index = songs_queue.return_queue()
+            await ctx.send("Queue of recommendations: ")
+            for  i in range(len(queue)):
+                if i == index:
+                    await ctx.send("*" + queue[i])
+                else:
+                    await ctx.send(queue[i])
+        
 
 async def setup(client):
     await client.add_cog(Songs(client))
