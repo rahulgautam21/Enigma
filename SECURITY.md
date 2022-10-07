@@ -19,6 +19,8 @@ svishwa2@ncsu.edu
 sbuddai@ncsu.edu
 sngudipa@ncsu.edu
 cchetan2@ncsu.edu
+sdua2@ncsu.edu
+rgautam3@ncsu.edu
 
 
 ```
