@@ -81,7 +81,7 @@ class Songs(commands.Cog):
         empty_queue = await self.handle_empty_queue(ctx)
         if not empty_queue:
             await self.play_song(songs_queue.prev_song(), ctx)
-        
+
 
     @commands.command(name='pause', help='This command pauses the song')
     async def pause(self, ctx):
@@ -132,7 +132,7 @@ class Songs(commands.Cog):
                     await ctx.send("*" + queue[i])
                 else:
                     await ctx.send(queue[i])
-        
+
 
 async def setup(client):
     await client.add_cog(Songs(client))
