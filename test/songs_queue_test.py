@@ -14,23 +14,3 @@ class Tests(unittest.TestCase):
 		ts = [song_names]
 		function = sq.next_song()
 		self.assertTrue("a" == function)
-
-	def test_prev_song(self):
-		song_names = ["a","b","c","d"]
-		sq = Songs_Queue(song_names)
-		ts = [song_names]
-		function = sq.prev_song()
-		self.assertTrue("d" == function)
-
-	def test_get_len(self):
-		song_names = ["a", "b", "c", "d"]
-		sq = Songs_Queue(song_names)
-		function = sq.get_len()
-		self.assertTrue(4 == function)
-
-	def test_return_queue(self):
-		song_names = ["a", "b", "c", "d"]
-		sq = Songs_Queue(song_names)
-		function = sq.return_queue()
-		result = (song_names,0)
-		self.assertTrue(result == function)
