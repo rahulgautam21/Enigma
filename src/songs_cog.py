@@ -193,5 +193,6 @@ class Songs(commands.Cog):
     Function to add the cog to the bot
 """
 
+
 async def setup(client):
     await client.add_cog(Songs(client))
