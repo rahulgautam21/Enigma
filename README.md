@@ -1,5 +1,12 @@
-# CSC-510
+<h1 align="center">
+  Enigma 🤖 - A music recommender bot for Discord
+  
+ [![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
+</h1>
 
+<div align="center">
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![DOI](https://zenodo.org/badge/533639670.svg)](https://zenodo.org/badge/latestdoi/533639670)
 [![Build Status](https://github.com/rahulgautam21/Enigma/actions/workflows/github-actions-build.yml/badge.svg)](https://github.com/rahulgautam21/Enigma/actions)
 [![GitHub Release](https://img.shields.io/github/release/rahulgautam21/Enigma.svg)](https://github.com/rahulgautam21/Enigma/releases)
@@ -9,10 +16,12 @@
 [![Open Issues](https://img.shields.io/github/issues/rahulgautam21/Enigma)](https://github.com/rahulgautam21/Enigma/issues)
 [![Pull Requests](https://img.shields.io/github/issues-pr/rahulgautam21/Enigma)](https://github.com/rahulgautam21/Enigma/pulls)
 ![Supports Python](https://img.shields.io/pypi/pyversions/pytest)
+[![Formatting python code](https://github.com/rahulgautam21/Enigma/actions/workflows/code-formatter.yml/badge.svg)](https://github.com/rahulgautam21/Enigma/actions/workflows/code-formatter.yml)
 
+</div>
 
-This is the code repo for Software Engineering project group 40, a group of 6 people - Srilekha, Chetana, Shreya, Sarika, Rahul, Shubham.
-
-The goal of this project is to create a discord bot to give music recommendations.
-
-Refer to INSTALL.md for cloning and running this project.
+<p align="center">
+    <a href="https://github.com/rahulgautam21/Enigma/issues/new/choose">Report Bug</a>
+    ·
+    <a href="https://github.com/rahulgautam21/Enigma/issues/new/choose">Request Feature</a>
+</p>

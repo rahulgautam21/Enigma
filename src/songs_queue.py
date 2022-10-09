@@ -1,10 +1,21 @@
-# This queue will store all the recommendation of the songs
+"""
+This file is responsible for maintaining the song queue
+"""
+
 
 class Songs_Queue():
+    """
+    This class is responsible for maintaining the song queue
+    """
+
     def __init__(self, song_names):
         self.queue = song_names
         self.index = 0
         self.current_index = 0
+
+    """
+    This function returns the next song in the queue
+    """
 
     def next_song(self):
         print(self.queue)
@@ -15,6 +26,10 @@ class Songs_Queue():
         self.index += 1
         return self.queue[val]
 
+    """
+    This function returns the previous song in the queue
+    """
+
     def prev_song(self):
         self.index -= 1
         if (self.index <= 0):
@@ -23,8 +38,16 @@ class Songs_Queue():
         self.current_index = val
         return self.queue[val]
 
+    """
+    This function returns the length of the song queue
+    """
+
     def get_len(self):
         return len(self.queue)
+
+    """
+    This function returns song queue and the current index of the song that is playing
+    """
 
     def return_queue(self):
         return (self.queue, self.current_index)
