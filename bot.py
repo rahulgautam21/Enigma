@@ -1,16 +1,20 @@
+
+"""
+dThis file is the main entry point of the bot
+"""
+
 from multiprocessing.util import debug
 import discord
 import os
-from get_all import *
+from src.get_all import *
 import re
 from dotenv import load_dotenv
 from discord.ext import commands
-from utils import searchSong
-from songs_queue import Songs_Queue
-from songs_cog import Songs
+from src.utils import searchSong
+from src.songs_queue import Songs_Queue
+from src.songs_cog import Songs
 
-
-load_dotenv('../.env')
+load_dotenv('.env')
 TOKEN = os.getenv('DISCORD_TOKEN')
 # This can be obtained using ctx.message.author.voice.channel
 VOICE_CHANNEL_ID = 1017135653789646851
@@ -18,21 +22,21 @@ intents = discord.Intents.all()
 intents.members = True
 client = commands.Bot(command_prefix='/', intents=intents)
 
+"""
+Function that gets executed once the bot is initialized
+"""
+
 
 @client.event
 async def on_ready():
-    # for guild in client.guilds:
-    #     print(guild.name)
-    #     print(
-    #         f'{client.user} is connected to the following guild:\n'
-    #         f'{guild.name}(id: {guild.id})'
-    #     )
     voice_channel = client.get_channel(VOICE_CHANNEL_ID)
     if client.user not in voice_channel.members:
         await voice_channel.connect()
-    await client.load_extension("songs_cog")
+    await client.load_extension("src.songs_cog")
 
-
+"""
+Function that is executed once any message is received by the bot
+"""
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -43,4 +47,7 @@ async def on_message(message):
         user_message = str(message.content)
         await client.process_commands(message)
 
+"""
+Start the bot
+"""
 client.run(TOKEN)

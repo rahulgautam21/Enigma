@@ -1,19 +1,36 @@
+
+"""
+This file is responsible for handling all data operations such as showing songs that the user can select.
+Recommendation of songs filtering operations etc.
+"""
+
 import pandas as pd
 import random
 
+"""
+This function returns songs and their title, artist, year and genre.
+"""
 def filtered_songs():
-	all_songs = pd.read_csv("../data/songs.csv")
-	all_songs = all_songs.filter(["title", "artist", "year", "top genre"])
-	return all_songs
+    all_songs = pd.read_csv("./data/songs.csv")
+    all_songs = all_songs.filter(["title", "artist", "year", "top genre"])
+    return all_songs
 
+
+"""
+This function returns all songs in the dataset.
+"""
 def get_all_songs():
-	all_songs = pd.read_csv("../data/songs.csv")
-	return all_songs 
+    all_songs = pd.read_csv("./data/songs.csv")
+    return all_songs
 
+
+"""
+This function returns recommended songs based on the songs that the user selected.
+"""
 def recommend(input_songs):
     # removing all songs with count = 1
     songs = get_all_songs()
-    songs = songs.groupby('top genre').filter(lambda x : len(x)>0)
+    songs = songs.groupby('top genre').filter(lambda x: len(x) > 0)
     # creating dictionary of song titles and genre
     playlist = dict(zip(songs['title'], songs['top genre']))
     # creating dictionary to count the frequency of each genre
