@@ -48,9 +48,9 @@ all_songs = filtered_songs()[[&#34;title&#34;, &#34;artist&#34;, &#34;top genre&
 &#34;&#34;&#34;
 This function returns random 10 songs for generating the poll for the user
 &#34;&#34;&#34;
-def random_ten():
+def random_25():
     ten_random_songs = (all_songs.sample(
-        frac=1).groupby(&#39;top genre&#39;).head(1)).sample(10)
+        frac=1).groupby(&#39;top genre&#39;).head(1)).sample(25)
     return ten_random_songs</code></pre>
 </details>
 </section>
@@ -68,8 +68,8 @@ def random_ten():
 <section>
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
-<dt id="src.utils.random_ten"><code class="name flex">
-<span>def <span class="ident">random_ten</span></span>(<span>)</span>
+<dt id="src.utils.random_25"><code class="name flex">
+<span>def <span class="ident">random_25</span></span>(<span>)</span>
 </code></dt>
 <dd>
 <div class="desc"></div>
@@ -77,7 +77,7 @@ def random_ten():
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def random_ten():
+<pre><code class="python">def random_25():
     ten_random_songs = (all_songs.sample(
         frac=1).groupby(&#39;top genre&#39;).head(1)).sample(10)
     return ten_random_songs</code></pre>
@@ -122,7 +122,7 @@ def random_ten():
 </li>
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="">
-<li><code><a title="src.utils.random_ten" href="#src.utils.random_ten">random_ten</a></code></li>
+<li><code><a title="src.utils.random_25" href="#src.utils.random_ten">random_ten</a></code></li>
 <li><code><a title="src.utils.searchSong" href="#src.utils.searchSong">searchSong</a></code></li>
 </ul>
 </li>
