@@ -15,11 +15,3 @@ While contributing to this project, please refer to the following set of guideli
 * A pull request may be merged following the sign-off of two developers
 
 * Specify the issue number in the pull request title
-
-## Building
-
-```
-git clone https://github.com/rahulgautam21/CSC-510
-cd CSC-510
-```
-
