@@ -4,7 +4,6 @@ import sys
 
 from src.get_all import *
 
-sys.path.append("../")
 warnings.filterwarnings("ignore")
 
 
