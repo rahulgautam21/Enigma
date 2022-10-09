@@ -17,7 +17,6 @@
 [![Pull Requests](https://img.shields.io/github/issues-pr/rahulgautam21/Enigma)](https://github.com/rahulgautam21/Enigma/pulls)
 ![Supports Python](https://img.shields.io/pypi/pyversions/pytest)
 [![Formatting python code](https://github.com/rahulgautam21/Enigma/actions/workflows/code-formatter.yml/badge.svg)](https://github.com/rahulgautam21/Enigma/actions/workflows/code-formatter.yml)
-[![codecov](https://codecov.io/gh/rahulgautam21/Enigma/branch/main/graph/badge.svg?token=6QCOL7VZ2T)](https://codecov.io/gh/rahulgautam21/Enigma)
 
 </div>
 
@@ -73,7 +72,10 @@ TODO
 
 <h1> RoadMap </h1>
 
-TODO
+Further Updates:
+1. Make Song recommendations more sophisticated by using Machine Learning Systems to make recommendations.
+2. Integrating dislikes into the recommendation logic as welll by considering the web of associated genres/artists.
+3. Extending the app to be used via a website or an application.
 
 
 <h1>📖 Documentation</h1>
