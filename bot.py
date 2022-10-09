@@ -1,4 +1,3 @@
-
 """
 dThis file is the main entry point of the bot
 """
@@ -21,7 +20,6 @@ VOICE_CHANNEL_ID = 1017135653789646851
 intents = discord.Intents.all()
 intents.members = True
 client = commands.Bot(command_prefix='/', intents=intents)
-
 """
 Function that gets executed once the bot is initialized
 """
@@ -34,9 +32,12 @@ async def on_ready():
         await voice_channel.connect()
     await client.load_extension("src.songs_cog")
 
+
 """
 Function that is executed once any message is received by the bot
 """
+
+
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -46,6 +47,7 @@ async def on_message(message):
     if message.channel.name == 'general':
         user_message = str(message.content)
         await client.process_commands(message)
+
 
 """
 Start the bot
