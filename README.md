@@ -17,6 +17,7 @@
 [![Pull Requests](https://img.shields.io/github/issues-pr/rahulgautam21/Enigma)](https://github.com/rahulgautam21/Enigma/pulls)
 ![Supports Python](https://img.shields.io/pypi/pyversions/pytest)
 [![Formatting python code](https://github.com/rahulgautam21/Enigma/actions/workflows/code-formatter.yml/badge.svg)](https://github.com/rahulgautam21/Enigma/actions/workflows/code-formatter.yml)
+[![codecov](https://codecov.io/gh/rahulgautam21/Enigma/branch/main/graph/badge.svg?token=OEPEJ0W8CR)](https://codecov.io/gh/rahulgautam21/Enigma)
 
 </div>
 
