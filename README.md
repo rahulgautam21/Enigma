@@ -68,7 +68,11 @@ You can now use the discord bot to give music recommendations! Use /help to see 
 
 <h1> 🚀 Demo </h1>
 
-TODO
+
+https://user-images.githubusercontent.com/20087273/194780603-f163caf6-2c9e-4d74-8fbd-c93f30e8935a.mp4
+
+
+
 
 <h1> RoadMap </h1>
 
