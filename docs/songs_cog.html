@@ -37,7 +37,7 @@ import discord
 from src.get_all import *
 from dotenv import load_dotenv
 from discord.ext import commands
-from src.utils import searchSong, random_ten
+from src.utils import searchSong, random_25
 from src.songs_queue import Songs_Queue
 import youtube_dl
 
@@ -139,7 +139,7 @@ class Songs(commands.Cog):
             await self.play_song(songs_queue.prev_song(), ctx)
 
     &#34;&#34;&#34;
-    Function to pause the music that is playing 
+    Function to pause the music that is playing
     &#34;&#34;&#34;
     @commands.command(name=&#39;pause&#39;, help=&#39;This command pauses the song&#39;)
     async def pause(self, ctx):
@@ -159,7 +159,7 @@ class Songs(commands.Cog):
         count = 0
         bot_message = &#34;Select song preferences by reaction &#39;👍&#39; or &#39;👎&#39; to the choices. \nSelect 3 songs&#34;
         await ctx.send(bot_message)
-        ten_random_songs = random_ten()
+        ten_random_songs = random_25()
         for ele in zip(ten_random_songs[&#34;title&#34;], ten_random_songs[&#34;artist&#34;]):
             bot_message = str(ele[0]) + &#34; By &#34; + str(ele[1])
             description = []
@@ -333,7 +333,7 @@ async def setup(client):
             await self.play_song(songs_queue.prev_song(), ctx)
 
     &#34;&#34;&#34;
-    Function to pause the music that is playing 
+    Function to pause the music that is playing
     &#34;&#34;&#34;
     @commands.command(name=&#39;pause&#39;, help=&#39;This command pauses the song&#39;)
     async def pause(self, ctx):
@@ -353,7 +353,7 @@ async def setup(client):
         count = 0
         bot_message = &#34;Select song preferences by reaction &#39;👍&#39; or &#39;👎&#39; to the choices. \nSelect 3 songs&#34;
         await ctx.send(bot_message)
-        ten_random_songs = random_ten()
+        ten_random_songs = random_25()
         for ele in zip(ten_random_songs[&#34;title&#34;], ten_random_songs[&#34;artist&#34;]):
             bot_message = str(ele[0]) + &#34; By &#34; + str(ele[1])
             description = []

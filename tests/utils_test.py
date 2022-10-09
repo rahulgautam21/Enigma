@@ -15,6 +15,6 @@ class Tests(unittest.TestCase):
         expected_link = "https://www.youtube.com/watch?v=E07s5ZYygMg"
         self.assertTrue(actual_link == expected_link)
 
-    def test_random_ten(self):
-        random_songs = utils.random_ten()
-        self.assertTrue(len(random_songs) == 10)
+    def test_random_25(self):
+        random_songs = utils.random_25()
+        self.assertTrue(len(random_songs) == 25)

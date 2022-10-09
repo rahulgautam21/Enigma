@@ -6,7 +6,7 @@ import discord
 from src.get_all import *
 from dotenv import load_dotenv
 from discord.ext import commands
-from src.utils import searchSong, random_ten
+from src.utils import searchSong, random_25
 from src.songs_queue import Songs_Queue
 import youtube_dl
 
@@ -125,7 +125,7 @@ class Songs(commands.Cog):
             await self.play_song(songs_queue.prev_song(), ctx)
 
     """
-    Function to pause the music that is playing 
+    Function to pause the music that is playing
     """
 
     @commands.command(name='pause', help='This command pauses the song')
@@ -147,7 +147,7 @@ class Songs(commands.Cog):
         count = 0
         bot_message = "Select song preferences by reaction '👍' or '👎' to the choices. \nSelect 3 songs"
         await ctx.send(bot_message)
-        ten_random_songs = random_ten()
+        ten_random_songs = random_25()
         for ele in zip(ten_random_songs["title"], ten_random_songs["artist"]):
             bot_message = str(ele[0]) + " By " + str(ele[1])
             description = []

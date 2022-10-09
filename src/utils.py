@@ -17,11 +17,10 @@ def searchSong(name_song):
 
 all_songs = filtered_songs()[["title", "artist", "top genre"]]
 """
-This function returns random 10 songs for generating the poll for the user
+This function returns random 25 songs for generating the poll for the user
 """
 
 
-def random_ten():
-    ten_random_songs = (all_songs.sample(
-        frac=1).groupby('top genre').head(1)).sample(10)
-    return ten_random_songs
+def random_25():
+    random_songs = (all_songs.sample(frac=1).groupby('top genre').head(1)).sample(25)
+    return random_songs
