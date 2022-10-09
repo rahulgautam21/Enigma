@@ -68,7 +68,7 @@ You can now use the discord bot to give music recommendations! Use /help to see 
 
 <h1> 🚀 Demo </h1>
 
-TODO
+[![Demo CountPages alpha](https://share.gifyoutube.com/KzB6Gb.gif)](https://www.youtube.com/watch?v=ek1j272iAmc)
 
 <h1> RoadMap </h1>
 
