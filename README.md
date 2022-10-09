@@ -89,11 +89,11 @@ Documentation for the code available at - <a href="https://rahulgautam21.github.
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/VishwanathamSarika"><img src="https://avatars.githubusercontent.com/u/39979596?v=4" width="75px;" alt=""/><br /><sub><b>Vishwanatham Sarika</b></sub></a></td>
+    <td align="center"><a href="https://github.com/ShreyaReddy17"><img src="https://avatars.githubusercontent.com/u/39979596?v=4" width="75px;" alt=""/><br /><sub><b>Shreya Buddaiahgari</b></sub></a></td>
     <td align="center"><a href="https://github.com/rahulgautam21"><img src="https://avatars.githubusercontent.com/u/12576405?s=400&v=4" width="75px;" alt=""/><br /><sub><b>Rahul Gautam</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/Shubhamdua02"><img src="https://avatars.githubusercontent.com/u/67901145?v=4" width="75px;" alt=""/><br /><sub><b>Shubham Dua</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/srilekha98"><img src="https://avatars.githubusercontent.com/u/20087273?v=4" width="75px;" alt=""/><br /><sub><b>Srilekha</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/chetana-c"><img src="https://avatars.githubusercontent.com/u/57283645?v=4" width="75px;" alt=""/><br /><sub><b>Chetana</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/srilekha98"><img src="https://avatars.githubusercontent.com/u/20087273?v=4" width="75px;" alt=""/><br /><sub><b>Srilekha Gudipati</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/chetana-c"><img src="https://avatars.githubusercontent.com/u/57283645?v=4" width="75px;" alt=""/><br /><sub><b>Chetana Chunduru</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/VishwanathamSarika"><img src="https://avatars.githubusercontent.com/u/39979596?v=4" width="75px;" alt=""/><br /><sub><b>Vishwanatham Sarika</b></sub></a><br /></td>
   </tr>
 
