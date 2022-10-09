@@ -47,3 +47,17 @@ class Tests(unittest.TestCase):
 		sq = Songs_Queue(song_names)
 		function = sq.get_len()
 		self.assertTrue(4 == function)
+
+	def test_return_queue(self):
+		song_names = ["a", "b", "c", "d"]
+		sq = Songs_Queue(song_names)
+		function = sq.return_queue()
+		result = (song_names,0)
+		self.assertTrue(result == function)
+
+	def test_return_queue_2(self):
+		song_names = ["TiK ToK","Baby","Marry You","Telephone","Secrets"]
+		sq = Songs_Queue(song_names)
+		function = sq.return_queue()
+		result = (song_names,0)
+		self.assertTrue(result == function)
