@@ -12,12 +12,12 @@ class Tests(unittest.TestCase):
     def test_filtered_songs(self):
         filtered = filtered_songs()
         print(filtered)
-        self.assertTrue(True)
+        self.assertTrue(len(filtered)!=0)
 
     def test_get_all_songs(self):
         songs = get_all_songs()
         print(songs)
-        self.assertTrue(True)
+        self.assertTrue(len(songs)!=0)
 
     def test_recommend(self):
         ts = {"title": "Your Love Is My Drug", "top genre": "dance pop"}
