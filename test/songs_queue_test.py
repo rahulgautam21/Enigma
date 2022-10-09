@@ -36,3 +36,14 @@ class Tests(unittest.TestCase):
 		function = sq.prev_song()
 		self.assertTrue("Secrets" == function)
 
+	def test_get_len(self):
+		song_names = ["TiK ToK","Baby","Marry You","Telephone","Secrets"]
+		sq = Songs_Queue(song_names)
+		function = sq.get_len()
+		self.assertTrue(5 == function)
+
+	def test_get_len(self):
+		song_names = ["a", "b", "c", "d"]
+		sq = Songs_Queue(song_names)
+		function = sq.get_len()
+		self.assertTrue(4 == function)
