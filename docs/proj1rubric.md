@@ -4,7 +4,7 @@
 |<div style="width:256px">Notes</div>|Assessment| Evidence                                                                  |
 |--------|------|---------------------------------------------------------------------------|
 |Video1|3||
-|Video2|3||https://github.com/rahulgautam21/Enigma/tree/dev#readme
+|Video2|3|https://github.com/rahulgautam21/Enigma#readme|
 |Workload is spread over the whole team (one team member is often Xtimes more productive than the others...|3| https://github.com/rahulgautam21/Enigma/graphs/contributors               |
 |but nevertheless, here is a track record that everyone is contributing a lot)|3| https://github.com/rahulgautam21/Enigma/graphs/contributors               |
 |Number of commits|3| https://github.com/rahulgautam21/Enigma/graphs/contributors               |
@@ -27,7 +27,7 @@
 |Test cases are routinely executed|3| https://github.com/rahulgautam21/Enigma/actions                           |
 |The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3| https://github.com/rahulgautam21/Enigma/blob/main/CONTRIBUTING.md         |
 |Issues are discussed before they are closed|3| Discussed in group meetings which are held multiple times a week          |
-|Chat channel: exists|3| WhatsApp group as well as Bot testing channel                             |
+|Chat channel: exists|3| WhatsApp group as well as Bot testing channel  (Whatsapp Group: https://user-images.githubusercontent.com/43646675/194787920-1f6db069-9df4-4e4e-94c1-ff222e556a27.jpeg) Bot testing channel : (https://user-images.githubusercontent.com/43646675/194788055-b0eaf08e-1326-4257-9344-0e3919a72368.jpeg)                          |
 |Test cases: a large proportion of the issues related to handling failing cases.|3|                                                                           |
 |Evidence that the whole team is using the same tools: everyone can get to all tools and files|3| All memebers are using VSCode or PyCharm for development and git for VCS. |
 |Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)|3| Python                                                                    |
