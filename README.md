@@ -17,6 +17,7 @@
 [![Pull Requests](https://img.shields.io/github/issues-pr/rahulgautam21/Enigma)](https://github.com/rahulgautam21/Enigma/pulls)
 ![Supports Python](https://img.shields.io/pypi/pyversions/pytest)
 [![Formatting python code](https://github.com/rahulgautam21/Enigma/actions/workflows/code-formatter.yml/badge.svg)](https://github.com/rahulgautam21/Enigma/actions/workflows/code-formatter.yml)
+[![codecov](https://codecov.io/gh/rahulgautam21/Enigma/branch/main/graph/badge.svg?token=OEPEJ0W8CR)](https://codecov.io/gh/rahulgautam21/Enigma)
 
 </div>
 
@@ -32,7 +33,7 @@
 <ul>
   <li>Recommend songs based on user input and play them on discord voice channel</li>
   <li>Can be used by teams/friends to listen to the same songs together</li>
-  <li>Can be used to play same music on multiple speakers to give a surround sound effect and increase volume output</li>
+  <li>Acts as an amplifier - can be used to play same music on multiple speakers to give a surround sound effect and increase volume output</li>
   <li>Ability to toggle music pause/resume</li>
   <li>Ability to play custom song without having to search the song on youtube</li>
   <li>Ability to switch back and forth between songs</li>
@@ -74,12 +75,27 @@ https://user-images.githubusercontent.com/20087273/194780603-f163caf6-2c9e-4d74-
 
 
 
-<h1> RoadMap </h1>
+<h1>📍RoadMap </h1>
 
-Further Updates:
-1. Make Song recommendations more sophisticated by using Machine Learning Systems to make recommendations.
-2. Integrating dislikes into the recommendation logic as welll by considering the web of associated genres/artists.
-3. Extending the app to be used via a website or an application.
+What We've Done:
+1. Created a Discord Bot via the Discord Developer Portal.
+2. Incorporated a [dataset](https://www.kaggle.com/datasets/leonardopena/top-spotify-songs-from-20102019-by-year) to our application.
+3. Added functionalities to the Discord bot (explained in the [Features](https://github.com/rahulgautam21/Enigma/blob/main/README.md) section above.
+4. Use the Discord Bot to play music based on the user's recommendations.
+5. Can also use the Bot to play custom songs without having to search for it on YouTube.
+
+What We've Yet To Do:
+1. Extend the application to be deployed online (via a website or an application).
+2. Make the song recommendations more sophisticated by using content-based recommendor systems.
+3. Integrating dislikes (taking into account the feedback of users) in the recommendation logic.
+4. Use web scraping and EDA to get a better database for the discord bot.
+5. Alternatively, use [this](https://www.kaggle.com/datasets/saurabhshahane/music-dataset-1950-to-2019) as the primary data source to make better recommendations.
+6. Add some more functionality to the discord bot:
+    * Move a song within a queue or to the top of the queue
+    * Shuffle songs within the queue
+    * Jump to a specific song in the queue
+    * Replay the song (instead of going to the next song and then coming back to the previous song)
+
 
 
 <h1>📖 Documentation</h1>
@@ -106,6 +122,10 @@ Documentation for the code available at - <a href="https://rahulgautam21.github.
 <h1> Contributing </h1>
 
 Please see [`CONTRIBUTING`](CONTRIBUTING.md) for contributing to this project.
+
+<h1> Data </h1>
+
+The data for this project is present [here](https://www.kaggle.com/datasets/leonardopena/top-spotify-songs-from-20102019-by-year)
 
 <h1> Support </h1>
 For any support reach out to rahul.gautam21@gmail.com
