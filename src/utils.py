@@ -15,7 +15,7 @@ def searchSong(name_song):
     return link
 
 
-all_songs = filtered_songs()[["title", "artist", "top genre"]]
+all_songs = filtered_songs()[["track_name", "artist", "genre"]]
 """
 This function returns random 25 songs for generating the poll for the user
 """
@@ -23,5 +23,5 @@ This function returns random 25 songs for generating the poll for the user
 
 def random_25():
     random_songs = (all_songs.sample(
-        frac=1).groupby('top genre').head(1)).sample(25)
+        frac=1).groupby('genre').head(1)).sample(25)
     return random_songs

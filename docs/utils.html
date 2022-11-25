@@ -43,14 +43,14 @@ def searchSong(name_song):
     return link
 
 
-all_songs = filtered_songs()[[&#34;title&#34;, &#34;artist&#34;, &#34;top genre&#34;]]
+all_songs = filtered_songs()[[&#34;title&#34;, &#34;artist&#34;, &#34;genre&#34;]]
 
 &#34;&#34;&#34;
 This function returns random 10 songs for generating the poll for the user
 &#34;&#34;&#34;
 def random_25():
     ten_random_songs = (all_songs.sample(
-        frac=1).groupby(&#39;top genre&#39;).head(1)).sample(25)
+        frac=1).groupby(&#39;genre&#39;).head(1)).sample(25)
     return ten_random_songs</code></pre>
 </details>
 </section>
@@ -79,7 +79,7 @@ def random_25():
 </summary>
 <pre><code class="python">def random_25():
     ten_random_songs = (all_songs.sample(
-        frac=1).groupby(&#39;top genre&#39;).head(1)).sample(10)
+        frac=1).groupby(&#39;genre&#39;).head(1)).sample(10)
     return ten_random_songs</code></pre>
 </details>
 </dd>
