@@ -188,11 +188,20 @@ class Songs(commands.Cog):
                 else:
                     await ctx.send(queue[i])
 
+    """
+    Function to play the previous song in the queue
+    """
+
+    @commands.command(name='shuffle', help='To shuffle songs in queue')
+    async def shuffle(self, ctx):
+        empty_queue = await self.handle_empty_queue(ctx)
+        if not empty_queue:
+            songs_queue.shuffle_queue()
+            await ctx.send("Playlist shuffled")
 
 """
     Function to add the cog to the bot
 """
-
 
 async def setup(client):
     await client.add_cog(Songs(client))
