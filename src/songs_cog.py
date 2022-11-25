@@ -148,7 +148,7 @@ class Songs(commands.Cog):
         bot_message = "Select song preferences by reaction '👍' or '👎' to the choices. \nSelect 3 songs"
         await ctx.send(bot_message)
         ten_random_songs = random_25()
-        for ele in zip(ten_random_songs["title"], ten_random_songs["artist"]):
+        for ele in zip(ten_random_songs["track_name"], ten_random_songs["artist"]):
             bot_message = str(ele[0]) + " By " + str(ele[1])
             description = []
             poll_embed = discord.Embed(title=bot_message,

@@ -42,7 +42,7 @@ This function returns songs and their title, artist, year and genre.
 &#34;&#34;&#34;
 def filtered_songs():
     all_songs = pd.read_csv(&#34;./data/songs.csv&#34;)
-    all_songs = all_songs.filter([&#34;title&#34;, &#34;artist&#34;, &#34;year&#34;, &#34;top genre&#34;])
+    all_songs = all_songs.filter([&#34;title&#34;, &#34;artist&#34;, &#34;year&#34;, &#34;genre&#34;])
     return all_songs
 
 
@@ -60,12 +60,12 @@ This function returns recommended songs based on the songs that the user selecte
 def recommend(input_songs):
     # removing all songs with count = 1
     songs = get_all_songs()
-    songs = songs.groupby(&#39;top genre&#39;).filter(lambda x: len(x) &gt; 0)
+    songs = songs.groupby(&#39;genre&#39;).filter(lambda x: len(x) &gt; 0)
     # creating dictionary of song titles and genre
-    playlist = dict(zip(songs[&#39;title&#39;], songs[&#39;top genre&#39;]))
+    playlist = dict(zip(songs[&#39;title&#39;], songs[&#39;genre&#39;]))
     # creating dictionary to count the frequency of each genre
     freq = {}
-    for item in songs[&#39;top genre&#39;]:
+    for item in songs[&#39;genre&#39;]:
         if (item in freq):
             freq[item] += 1
         else:
@@ -108,7 +108,7 @@ def recommend(input_songs):
 </summary>
 <pre><code class="python">def filtered_songs():
     all_songs = pd.read_csv(&#34;./data/songs.csv&#34;)
-    all_songs = all_songs.filter([&#34;title&#34;, &#34;artist&#34;, &#34;year&#34;, &#34;top genre&#34;])
+    all_songs = all_songs.filter([&#34;title&#34;, &#34;artist&#34;, &#34;year&#34;, &#34;genre&#34;])
     return all_songs</code></pre>
 </details>
 </dd>
@@ -138,12 +138,12 @@ def recommend(input_songs):
 <pre><code class="python">def recommend(input_songs):
     # removing all songs with count = 1
     songs = get_all_songs()
-    songs = songs.groupby(&#39;top genre&#39;).filter(lambda x: len(x) &gt; 0)
+    songs = songs.groupby(&#39;genre&#39;).filter(lambda x: len(x) &gt; 0)
     # creating dictionary of song titles and genre
-    playlist = dict(zip(songs[&#39;title&#39;], songs[&#39;top genre&#39;]))
+    playlist = dict(zip(songs[&#39;title&#39;], songs[&#39;genre&#39;]))
     # creating dictionary to count the frequency of each genre
     freq = {}
-    for item in songs[&#39;top genre&#39;]:
+    for item in songs[&#39;genre&#39;]:
         if (item in freq):
             freq[item] += 1
         else:
