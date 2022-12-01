@@ -3,6 +3,7 @@ This file is responsible for maintaining the song queue
 """
 from random import shuffle
 
+
 class Songs_Queue():
     """
     This class is responsible for maintaining the song queue
@@ -54,4 +55,3 @@ class Songs_Queue():
 
     def shuffle_queue(self):
         shuffle(self.queue)
-        
