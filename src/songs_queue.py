@@ -55,3 +55,6 @@ class Songs_Queue():
 
     def shuffle_queue(self):
         shuffle(self.queue)
+
+    def add_to_queue(self, song_name):
+        self.queue.append(song_name)
