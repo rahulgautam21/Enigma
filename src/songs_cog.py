@@ -190,7 +190,7 @@ class Songs(commands.Cog):
                     await ctx.send(queue[i])
 
     """
-    Function to play the previous song in the queue
+    Function to shuffle songs in the queue
     """
 
     @commands.command(name='shuffle', help='To shuffle songs in queue')
@@ -199,6 +199,17 @@ class Songs(commands.Cog):
         if not empty_queue:
             songs_queue.shuffle_queue()
             await ctx.send("Playlist shuffled")
+
+    """
+    Function to add custom song to the queue
+    """
+
+    @commands.command(name='add_song', help='To add custom song to the queue')
+    async def add_song(self, ctx):
+        user_message = str(ctx.message.content)
+        song_name = user_message.split(' ', 1)[1]
+        songs_queue.add_to_queue(song_name)
+        await ctx.send("Song added to queue")
 
 
 """
