@@ -109,12 +109,10 @@ Documentation for the code available at - <a href="https://saswat123.github.io/E
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/ShreyaReddy17"><img src="https://avatars.githubusercontent.com/u/39979596?v=4" width="75px;" alt=""/><br /><sub><b>Shreya Buddaiahgari</b></sub></a></td>
-    <td align="center"><a href="https://github.com/rahulgautam21"><img src="https://avatars.githubusercontent.com/u/12576405?s=400&v=4" width="75px;" alt=""/><br /><sub><b>Rahul Gautam</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/Shubhamdua02"><img src="https://avatars.githubusercontent.com/u/67901145?v=4" width="75px;" alt=""/><br /><sub><b>Shubham Dua</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/srilekha98"><img src="https://avatars.githubusercontent.com/u/20087273?v=4" width="75px;" alt=""/><br /><sub><b>Srilekha Gudipati</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/chetana-c"><img src="https://avatars.githubusercontent.com/u/57283645?v=4" width="75px;" alt=""/><br /><sub><b>Chetana Chunduru</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/VishwanathamSarika"><img src="https://avatars.githubusercontent.com/u/39979596?v=4" width="75px;" alt=""/><br /><sub><b>Vishwanatham Sarika</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/Sneha1b"><img src="https://avatars.githubusercontent.com/u/29037428?v=4" width="75px;" alt=""/><br /><sub><b>Sneha Madle</b></sub></a></td>
+    <td align="center"><a href="https://github.com/yugaleepatil"><img src="https://avatars.githubusercontent.com/u/91028926?v=4" width="75px;" alt=""/><br /><sub><b>Yugalee Patil</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/cnangia-ncsu"><img src="https://avatars.githubusercontent.com/u/89174495?v=4" width="75px;" alt=""/><br /><sub><b>Chirrag Nangia</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/SASWAT123"><img src="https://avatars.githubusercontent.com/u/21155121?v=4" width="75px;" alt=""/><br /><sub><b>Saswat Priyadarshan</b></sub></a><br /></td>
   </tr>
 
 </table>
@@ -125,7 +123,7 @@ Please see [`CONTRIBUTING`](CONTRIBUTING.md) for contributing to this project.
 
 <h1> Data </h1>
 
-The data for this project is present [here](https://www.kaggle.com/datasets/leonardopena/top-spotify-songs-from-20102019-by-year)
+The data for this project is present [here](https://www.kaggle.com/datasets/saurabhshahane/music-dataset-1950-to-2019)
 
 <h1> Support </h1>
-For any support reach out to rahul.gautam21@gmail.com
+For any support reach out to spriyad2@ncsu.edu
