@@ -40,11 +40,11 @@
 </ul>
 </div>
   
-<h1> Features added by Group 17</h1>
+<h1> 💡 Features added by Group 17</h1>
 
 <div>
 <ul>
-  <li>Added a new data set [this](https://www.kaggle.com/datasets/saurabhshahane/music-dataset-1950-to-2019) which has approximately 24000 songs</li>
+  <li>Added a new data set which has approximately 24000 songs using </li> [this](https://www.kaggle.com/datasets/saurabhshahane/music-dataset-1950-to-2019) 
   <li>Added a new functionality to shuffle the songs within the queue</li>
   <li>Added a new functionality to add a custom song to the queue</li>
   <li>Fixed the issue of fetching songs from Youtube</li>
