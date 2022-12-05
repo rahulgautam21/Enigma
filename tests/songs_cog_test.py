@@ -31,3 +31,11 @@ class Test_Songs_Cog(unittest.TestCase):
     async def test_pause(self):
         result = await Songs.pause()
         assert result == "The bot is not playing anything at the moment."
+
+    async def test_shuffle(self):
+        result = await Songs.shuffle()
+        assert result == "Playlist shuffled"
+
+    async def test_add_song(self):
+        result = await Songs.add_song()
+        assert result == "Song added to queue"
