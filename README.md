@@ -100,7 +100,7 @@ What We've Yet To Do:
 
 <h1>📖 Documentation</h1>
 
-Documentation for the code available at - <a href="https://rahulgautam21.github.io/Enigma">Enigma Docs</a>  
+Documentation for the code available at - <a href="https://saswat123.github.io/Enigma">Enigma Docs</a>  
 
 
 <h1> 👥 Contributors <a name="Contributors"></a> </h1>
