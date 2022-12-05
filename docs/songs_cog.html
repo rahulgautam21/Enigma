@@ -197,6 +197,26 @@ class Songs(commands.Cog):
                 else:
                     await ctx.send(queue[i])
 
+    &#34;&#34;&#34;
+    Function to shuffle songs in the queue
+    &#34;&#34;&#34;
+    @commands.command(name=&#39;shuffle&#39;, help=&#39;To shuffle songs in queue&#39;)
+    async def shuffle(self, ctx):
+        empty_queue = await self.handle_empty_queue(ctx)
+        if not empty_queue:
+            songs_queue.shuffle_queue()
+            await ctx.send(&#34;Playlist shuffled &#34;)
+
+    &#34;&#34;&#34;
+    Function to add custom song to the queue
+    &#34;&#34;&#34;
+    @commands.command(name=&#39;add_song&#39;, help=&#39;To add custom song to the queue&#39;)
+    async def add_song(self, ctx):
+        user_message = str(ctx.message.content)
+        song_name = user_message.split(' ', 1)[1]
+        songs_queue.add_to_queue(song_name)
+        await ctx.send(&#34;Song added to queue &#34;)
+
 
 &#34;&#34;&#34;
     Function to add the cog to the bot
@@ -389,7 +409,26 @@ async def setup(client):
                 if i == index:
                     await ctx.send(&#34;Currently Playing: &#34; + queue[i])
                 else:
-                    await ctx.send(queue[i])</code></pre>
+                    await ctx.send(queue[i])
+    &#34;&#34;&#34;
+    Function to shuffle songs in the queue
+    &#34;&#34;&#34;
+    @commands.command(name=&#39;shuffle&#39;, help=&#39;To shuffle songs in queue&#39;)
+    async def shuffle(self, ctx):
+        empty_queue = await self.handle_empty_queue(ctx)
+        if not empty_queue:
+            songs_queue.shuffle_queue()
+            await ctx.send(&#34;Playlist shuffled &#34;)
+    
+    &#34;&#34;&#34;
+    Function to add custom song to the queue
+    &#34;&#34;&#34;
+    @commands.command(name=&#39;add_song&#39;, help=&#39;To add custom song to the queue&#39;)
+    async def add_song(self, ctx):
+        user_message = str(ctx.message.content)
+        song_name = user_message.split(' ', 1)[1]
+        songs_queue.add_to_queue(song_name)
+        await ctx.send(&#34;Song added to queue &#34;)</code></pre>
 </details>
 <h3>Ancestors</h3>
 <ul class="hlist">
@@ -426,6 +465,14 @@ async def setup(client):
 <div class="desc"></div>
 </dd>
 <dt id="src.songs_cog.Songs.stop"><code class="name">var <span class="ident">stop</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.songs_cog.Songs.shuffle"><code class="name">var <span class="ident">shuffle</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.songs_cog.Songs.add_song"><code class="name">var <span class="ident">add custom song</span></code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
@@ -517,6 +564,8 @@ async def setup(client):
 <li><code><a title="src.songs_cog.Songs.queue" href="#src.songs_cog.Songs.queue">queue</a></code></li>
 <li><code><a title="src.songs_cog.Songs.resume" href="#src.songs_cog.Songs.resume">resume</a></code></li>
 <li><code><a title="src.songs_cog.Songs.stop" href="#src.songs_cog.Songs.stop">stop</a></code></li>
+<li><code><a title="src.songs_cog.Songs.shuffle" href="#src.songs_cog.Songs.shuffle">shuffle</a></code></li>
+<li><code><a title="src.songs_cog.Songs.add_song" href="#src.songs_cog.Songs.add_song">add custom song</a></code></li>
 </ul>
 </li>
 </ul>
