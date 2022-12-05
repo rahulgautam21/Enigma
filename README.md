@@ -40,7 +40,18 @@
 </ul>
 </div>
   
-  
+<h1> Features added by Group 17</h1>
+
+<div>
+<ul>
+  <li>Added a new data set [this](https://www.kaggle.com/datasets/saurabhshahane/music-dataset-1950-to-2019) which has approximately 24000 songs</li>
+  <li>Added a new functionality to shuffle the songs within the queue</li>
+  <li>Added a new functionality to add a custom song to the queue</li>
+  <li>Fixed the issue of fetching songs from Youtube</li>
+  <li>Extended the application to be deployed on Microsoft Azure</li>
+</ul>
+</div>
+
 <h1> ⚒️ Installation Procedure </h1>
 
 
@@ -72,6 +83,7 @@ You can now use the discord bot to give music recommendations! Use /help to see 
 
 https://user-images.githubusercontent.com/20087273/194780603-f163caf6-2c9e-4d74-8fbd-c93f30e8935a.mp4
 
+<h1> 🚀 Demo 2 - Group 17 </h1>
 
 
 
@@ -83,16 +95,18 @@ What We've Done:
 3. Added functionalities to the Discord bot (explained in the [Features](https://github.com/rahulgautam21/Enigma/blob/main/README.md) section above.
 4. Use the Discord Bot to play music based on the user's recommendations.
 5. Can also use the Bot to play custom songs without having to search for it on YouTube.
+6. Extend the application to be deployed online (via a website or an application).
+7. Alternatively, use [this](https://www.kaggle.com/datasets/saurabhshahane/music-dataset-1950-to-2019) as the primary data source to make better recommendations.
+8. Added some more functionality to the discord bot:
+    * Add a custom song to the queue
+    * Shuffle songs within the queue
 
 What We've Yet To Do:
-1. Extend the application to be deployed online (via a website or an application).
-2. Make the song recommendations more sophisticated by using content-based recommendor systems.
-3. Integrating dislikes (taking into account the feedback of users) in the recommendation logic.
-4. Use web scraping and EDA to get a better database for the discord bot.
-5. Alternatively, use [this](https://www.kaggle.com/datasets/saurabhshahane/music-dataset-1950-to-2019) as the primary data source to make better recommendations.
-6. Add some more functionality to the discord bot:
+1. Make the song recommendations more sophisticated by using content-based recommendor systems.
+2. Integrating dislikes (taking into account the feedback of users) in the recommendation logic.
+3. Use web scraping and EDA to get a better database for the discord bot.
+4. Add some more functionality to the discord bot:
     * Move a song within a queue or to the top of the queue
-    * Shuffle songs within the queue
     * Jump to a specific song in the queue
     * Replay the song (instead of going to the next song and then coming back to the previous song)
 
