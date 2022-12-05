@@ -13,7 +13,10 @@ import youtube_dl
 FFMPEG_OPTIONS = {
     'before_options':
     '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',
-    'options': '-vn'
+    'options': [
+        'ffmpeg', '-i', './assets/sample.mp4', '-vn', '-f', 'mp3',
+        './assets/sample.mp3'
+    ]
 }
 YDL_OPTIONS = {'format': 'bestaudio/best', 'noplaylist': 'True'}
 
@@ -148,7 +151,8 @@ class Songs(commands.Cog):
         bot_message = "Select song preferences by reaction '👍' or '👎' to the choices. \nSelect 3 songs"
         await ctx.send(bot_message)
         ten_random_songs = random_25()
-        for ele in zip(ten_random_songs["title"], ten_random_songs["artist"]):
+        for ele in zip(ten_random_songs["track_name"],
+                       ten_random_songs["artist"]):
             bot_message = str(ele[0]) + " By " + str(ele[1])
             description = []
             poll_embed = discord.Embed(title=bot_message,
@@ -187,6 +191,28 @@ class Songs(commands.Cog):
                     await ctx.send("Currently Playing: " + queue[i])
                 else:
                     await ctx.send(queue[i])
+
+    """
+    Function to shuffle songs in the queue
+    """
+
+    @commands.command(name='shuffle', help='To shuffle songs in queue')
+    async def shuffle(self, ctx):
+        empty_queue = await self.handle_empty_queue(ctx)
+        if not empty_queue:
+            songs_queue.shuffle_queue()
+            await ctx.send("Playlist shuffled")
+
+    """
+    Function to add custom song to the queue
+    """
+
+    @commands.command(name='add_song', help='To add custom song to the queue')
+    async def add_song(self, ctx):
+        user_message = str(ctx.message.content)
+        song_name = user_message.split(' ', 1)[1]
+        songs_queue.add_to_queue(song_name)
+        await ctx.send("Song added to queue")
 
 
 """

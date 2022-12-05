@@ -1,6 +1,7 @@
 """
 This file is responsible for maintaining the song queue
 """
+from random import shuffle
 
 
 class Songs_Queue():
@@ -51,3 +52,9 @@ class Songs_Queue():
 
     def return_queue(self):
         return (self.queue, self.current_index)
+
+    def shuffle_queue(self):
+        shuffle(self.queue)
+
+    def add_to_queue(self, song_name):
+        self.queue.append(song_name)
