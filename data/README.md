@@ -1,3 +1,3 @@
-This is a dataset of top 50 Spotify music from 2010 to 2019. Originally published at Kaggle:Top Spotify songs from 2010-2019 - BY YEAR which is scraped from Spotify: Organize your music
+This is a dataset of songs from 1950 to 2019 from Kaggle for this music recommendation system.
 
-https://www.kaggle.com/datasets/leonardopena/top-spotify-songs-from-20102019-by-year
+https://www.kaggle.com/datasets/saurabhshahane/music-dataset-1950-to-2019
